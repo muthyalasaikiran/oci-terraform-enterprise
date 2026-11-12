@@ -1,0 +1,69 @@
+# Terraform local installation / cache (never commit provider binaries)
+**/.terraform/
+**/.terraform.d/
+.terraformrc
+terraform.rc
+
+# Terraform state (may contain secrets and internal data)
+**/*.tfstate
+**/*.tfstate.*
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/*.tfplan
+**/tfplan
+**/tfplan.*
+**/*.plan
+**/crash.log
+**/crash.*.log
+**/override.tf
+**/override.tf.json
+**/*_override.tf
+**/*_override.tf.json
+
+# Real environment configuration and secrets (retain sanitized examples)
+**/*.tfvars
+**/*.auto.tfvars
+**/*.tfvars.json
+**/*.auto.tfvars.json
+!**/*.tfvars.example
+!**/*.auto.tfvars.example
+!**/*.tfvars.json.example
+**/.env
+**/.env.*
+!**/.env.example
+**/.oci/
+**/.ssh/
+**/credentials
+**/credentials.json
+**/secrets.json
+**/*secret*.tfvars*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.ppk
+**/id_rsa
+**/id_ed25519
+**/known_hosts
+
+# Backups, exported artifacts and generated binaries
+**/*.bak
+**/*.backup
+**/*.before-*.bak
+**/*.zip
+**/*.7z
+**/*.exe
+**/*.dll
+**/*.log
+**/tmp/
+**/temp/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# INTENTIONALLY track .terraform.lock.hcl to pin providers. Review it before commit.
+# INTENTIONALLY track source .tf, sanitized .tfvars.example, README and docs.

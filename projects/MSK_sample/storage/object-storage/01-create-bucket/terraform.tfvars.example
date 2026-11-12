@@ -1,0 +1,13 @@
+region         = "ap-mumbai-1"
+compartment_id = "ocid1.compartment.oc1..REPLACE"
+namespace      = "REPLACE_WITH_TENANCY_OBJECT_STORAGE_NAMESPACE"
+bucket_name    = "msk-sample-tf-uat-obj-test01-REPLACE_WITH_UNIQUE_SUFFIX"
+
+upload_sample_object = true
+sample_object_name   = "terraform-tests/test-upload.txt"
+
+tags = {
+  project     = "MSK_sample"
+  environment = "uat"
+  managed_by  = "terraform"
+}

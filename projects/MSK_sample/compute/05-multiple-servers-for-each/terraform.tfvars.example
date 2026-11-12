@@ -1,0 +1,16 @@
+# Replace placeholders before plan/apply. By default deploy ZERO servers.
+region = "ap-mumbai-1"
+oci_profile = "DEFAULT"
+compartment_id = "REPLACE_WITH_APPROVED_COMPARTMENT_OCID"
+availability_domain = "OEXv:AP-MUMBAI-1-AD-1"
+subnet_id = "REPLACE_WITH_APPROVED_SUBNET_OCID"
+image_id = "REPLACE_WITH_COMPATIBLE_IMAGE_OCID"
+ssh_public_key_path = null
+nsg_ids = []
+tags = { Project = "MSK_sample", ManagedBy = "Terraform" }
+servers = {}
+# Example AFTER approving two distinct, unused private IPs:
+# servers = {
+#   "MSK-TF-UAT-MULTI01" = { private_ip = "APPROVED_IP_1", shape = "VM.Standard3.Flex", ocpus = 1, memory_in_gbs = 8 }
+#   "MSK-TF-UAT-MULTI02" = { private_ip = "APPROVED_IP_2", shape = "VM.Standard3.Flex", ocpus = 2, memory_in_gbs = 16 }
+# }

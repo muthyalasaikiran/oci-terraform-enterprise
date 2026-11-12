@@ -1,0 +1,18 @@
+# Copy to terraform.tfvars, then REVIEW network team's approved subnet and NSG.
+# Do not use the existing APP subnet without network-team approval.
+region                 = "ap-mumbai-1"
+compartment_id         = "ocid1.compartment.oc1..REPLACE"
+availability_domain    = "OEXv:AP-MUMBAI-1-AD-1"
+file_system_name       = "MSK-TF-UAT-FSS01"
+mount_target_name      = "MSK-TF-UAT-MT01"
+mount_target_subnet_id = "REPLACE_WITH_APPROVED_FSS_MOUNT_TARGET_SUBNET_OCID"
+mount_target_nsg_ids   = ["REPLACE_WITH_APPROVED_FSS_NSG_OCID"]
+export_path            = "/msk-sample"
+client_cidr            = "192.0.2.1/32" # Example client CIDR; VERIFY with network team
+export_access          = "READ_ONLY" # Change only if explicitly approved
+
+tags = {
+  project     = "MSK_sample"
+  environment = "uat"
+  managed_by  = "terraform"
+}

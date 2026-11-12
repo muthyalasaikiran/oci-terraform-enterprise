@@ -1,0 +1,2 @@
+ABFL OCI Terraform Object Storage smoke test.
+This object is sample data only. Do not put credentials or production files here.

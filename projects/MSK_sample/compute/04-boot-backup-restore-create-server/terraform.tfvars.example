@@ -1,0 +1,19 @@
+# Copy to terraform.tfvars. Replace ALL placeholders with approved values.
+region              = "ap-mumbai-1"
+oci_profile         = "DEFAULT"
+compartment_id      = "REPLACE_WITH_COMPARTMENT_OCID"
+availability_domain = "OEXv:AP-MUMBAI-1-AD-1"
+source_boot_volume_id = "REPLACE_WITH_ORIGINAL_BOOT_VOLUME_OCID"
+backup_name              = "MSK-TF-UAT-BOOT-FULL-BACKUP01"
+restored_boot_volume_name = "MSK-TF-UAT-BOOT-RESTORED01"
+new_server_name          = "MSK-TF-UAT-BOOT-RESTORE-TEST01"
+subnet_id                = "" # Supply approved subnet OCID for the server stage
+shape                    = "VM.Standard.E4.Flex" # Must match architecture/availability
+ocpus                    = 1
+memory_in_gbs            = 8
+ssh_authorized_keys      = "" # Existing boot image credentials may be preserved
+
+# Change ONE stage at a time, after review.
+create_backup  = false
+create_restore = false
+create_server  = false

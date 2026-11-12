@@ -1,0 +1,11 @@
+region              = "ap-mumbai-1"
+compartment_id      = "ocid1.compartment.oc1..REPLACE"
+availability_domain = "OEXv:AP-MUMBAI-1-AD-1"
+volume_name         = "MSK-TF-UAT-DATA01"
+size_gb             = 100
+vpus_per_gb         = 10
+tags = {
+  project     = "MSK_sample"
+  environment = "uat"
+  managed_by  = "terraform"
+}

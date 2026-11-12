@@ -1,0 +1,17 @@
+# Change for EACH existing volume. NEVER use the source volume as a managed Terraform resource.
+region              = "ap-mumbai-1"
+compartment_id      = "ocid1.compartment.oc1..REPLACE"
+availability_domain = "OEXv:AP-MUMBAI-1-AD-1"
+existing_volume_id  = "REPLACE_WITH_EXISTING_BLOCK_VOLUME_OCID"
+backup_name          = "REPLACE-WITH-VOLUME-NAME-backup-YYYYMMDD"
+backup_type          = "FULL"
+restored_volume_name = "REPLACE-WITH-VOLUME-NAME-RESTORED-TEST"
+restored_vpus_per_gb = 10
+create_backup        = true
+create_restore       = false
+
+tags = {
+  project     = "MSK_sample"
+  environment = "uat"
+  managed_by  = "terraform"
+}

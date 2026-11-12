@@ -1,0 +1,15 @@
+# Replace placeholders before plan/apply. By default deploy ZERO servers.
+region = "ap-mumbai-1"
+oci_profile = "DEFAULT"
+compartment_id = "REPLACE_WITH_APPROVED_COMPARTMENT_OCID"
+availability_domain = "OEXv:AP-MUMBAI-1-AD-1"
+subnet_id = "REPLACE_WITH_APPROVED_SUBNET_OCID"
+image_id = "REPLACE_WITH_COMPATIBLE_IMAGE_OCID"
+ssh_public_key_path = null
+nsg_ids = []
+tags = { Project = "MSK_sample", ManagedBy = "Terraform" }
+server_count = 0
+name_prefix = "MSK-TF-UAT-COUNT"
+shape = "VM.Standard3.Flex"
+ocpus = 1
+memory_in_gbs = 8

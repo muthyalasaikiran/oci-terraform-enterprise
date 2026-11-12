@@ -1,0 +1,5 @@
+region          = "ap-mumbai-1"
+instance_id     = "REPLACE_WITH_RUNNING_INSTANCE_OCID"
+volume_id       = "REPLACE_WITH_CREATED_BLOCK_VOLUME_OCID"
+attachment_name = "MSK-TF-UAT-TEST01-DATA01-ATTACHMENT"
+attachment_type = "paravirtualized"
