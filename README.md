@@ -70,3 +70,10 @@ terraform show -no-color .\create.tfplan
 - The custom-image example remains **ON HOLD**. Do not infer that all compute cases have passed testing.
 
 See [GitHub setup](docs/GITHUB_SETUP.md), [all project inputs](docs/PROJECT_INPUTS.md), and [security checklist](docs/SECURITY_CHECKLIST.md) before your first push.
+
+## Customer Getting Started
+
+For setup requirements, configuration, deployment, validation and cleanup instructions, see:
+
+[Customer Deployment Guide](docs/CUSTOMER_DEPLOYMENT_GUIDE.md)
+
